@@ -1108,6 +1108,7 @@ test('apiMiddleware must dispatch an error request FSA on a request error', (t) 
   const doGetState = () => {};
   const nextHandler = apiMiddleware({ getState: doGetState });
   const doNext = (action) => {
+    
     switch (action.type) {
     case 'REQUEST':
       if (!action.error) {
